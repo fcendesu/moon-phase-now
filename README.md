@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Collecting workspace information# Moon Phase Now
+
+A visually immersive Next.js application that displays accurate moon phases for any date with dynamic backgrounds, smooth transitions, and lunar information.
+
+## Features
+
+- **Real-time Moon Phase Display**: Shows accurate moon phase for the current date
+- **Date Selection**: Select any date to see its corresponding moon phase
+- **Dynamic Backgrounds**: Background changes to match the current moon phase
+- **Smooth Transitions**: Animations between phase changes
+- **Detailed Information**: Learn about the meaning and significance of each moon phase
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) 15.2.1
+- [React](https://reactjs.org/) 19.0.0
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- CSS-in-JS (styled-jsx)
+
+## Project Structure
+
+```
+moon-phase-now/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx        # Main application page
+│   │   ├── layout.tsx      # Root layout component
+│   │   └── globals.css     # Global styles
+│   ├── components/
+│   │   ├── MoonDisplay.tsx  # Moon visualization component
+│   │   └── MoonPhaseInfo.tsx# Moon phase information component
+│   └── utils/
+│       └── moonPhase.js    # Logic for calculating moon phases
+├── public/
+│   ├── new-moon.webp       # Moon phase images
+│   ├── waxing-crescent.webp
+│   ├── first-quarter.webp
+│   └── ...other moon phase images
+```
+
+## How It Works
+
+The application calculates the moon phase for any given date using astronomical algorithms. It identifies eight distinct phases:
+
+- New Moon
+- Waxing Crescent
+- First Quarter
+- Waxing Gibbous
+- Full Moon
+- Waning Gibbous
+- Third Quarter
+- Waning Crescent
+
+Each phase has a corresponding image and description that helps users understand lunar cycles and their significance.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/fcen/moon-phase-now.git
+cd moon-phase-now
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- The application shows the current moon phase by default
+- Use the date picker to select any date and see its corresponding moon phase
+- Learn about the meaning and significance of each phase from the information provided
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+MIT License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Moon phase calculation algorithm based on astronomical formulas
+- Images sourced from astronomical databases
